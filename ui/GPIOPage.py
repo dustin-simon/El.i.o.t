@@ -1,9 +1,7 @@
 from kivy.uix.tabbedpanel import TabbedPanelItem
 from kivy.lang import Builder
 from kivy.uix.button import Button
-from kivy.uix.label import Label
-from kivy.properties import ObjectProperty
-from kivy.core.window import Window
+from interface.GPIO import GPIOInterface
 
 Builder.load_file("ui/gpio.kv")
 
@@ -12,15 +10,18 @@ class GPIOPage(TabbedPanelItem):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
+        self.gpio_interface = GPIOInterface()
+
     def initGPIOList(self):
 
         self.gpio_list.bind(minimum_height=self.gpio_list.setter('height'))
 
-        for i in range(100):
+        gpios = self.gpio_interface.getGPIOList()
 
-            label = Button(text="GPIO [ " + str(i) + " ]")
-            label.size_hint_y = None
-            label.height = 80
+        for gpio in gpios:
 
-            self.gpio_list.add_widget(label)
+            btn = Button(text=gpio["label"])
+            btn.size_hint_y = None
+            btn.height = 80
 
+            self.gpio_list.add_widget(btn)
