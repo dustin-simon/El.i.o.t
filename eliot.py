@@ -1,3 +1,9 @@
+"""
+========================================
+El.i.o.t - Electronics Input Output Tool
+========================================
+"""
+
 import eliot
 
 nameLine = " El.i.o.t - Electronics Input Output Tool ( v" + eliot.__version__+" ) "
