@@ -1,0 +1,59 @@
+GridLayout:
+    cols: 2
+    side_menu: side_menu
+    canvas.before:
+        Color:
+            rgb: 0,0.04,0.11
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    ScrollView:
+        do_scroll_x: False
+        do_scroll_y: True
+
+        size_hint_x: 0.1
+
+        GridLayout:
+            id: side_menu
+            cols: 1
+            on_parent: self.bind(minimum_height=self.setter('height'))
+            size_hint_y: None
+
+            Button:
+                size_hint_y: None
+                height: self.width
+                background_color: 1,1,1,0
+
+                canvas:
+                    Rectangle:
+                        source: 'resources/icons/power.png'
+                        size: (self.height-20, self.height-20)
+                        pos: (self.pos[0]+10, self.pos[1]+10)
+
+            Button:
+                size_hint_y: None
+                height: self.width
+                background_color: 1,1,1,0
+
+                canvas:
+                    Rectangle:
+                        source: 'resources/icons/settings.png'
+                        size: (self.height-20, self.height-20)
+                        pos: (self.pos[0]+10, self.pos[1]+10)
+
+    ScrollView:
+        do_scroll_x: False
+        do_scroll_y: True
+
+        GridLayout:
+            id: main_menu
+            on_parent: self.bind(minimum_height=self.setter('height'))
+            cols: 1
+            size_hint_y: None
+
+            Button:
+                text: "test1"
+
+            Button:
+                text: "test2"
