@@ -1,0 +1,24 @@
+<Shutdown@Popup>:
+    title: 'Herunterfahren'
+    size_hint_x: 0.5
+    size_hint_y: 0.5
+
+    background_color: app.MAIN_COLOR
+
+    GridLayout:
+        cols: 1
+
+        Label:
+            text: 'Abschalten?'
+
+        GridLayout:
+            rows: 1
+            size_hint_y: 0.5
+
+            Button:
+                text: 'ja'
+                on_press: app.shutdown()
+
+            Button:
+                text: 'nein'
+                on_press: root.dismiss()

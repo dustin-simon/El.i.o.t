@@ -21,6 +21,7 @@ GridLayout:
             size_hint_y: None
 
             Button:
+                id: power_btn
                 size_hint_y: None
                 height: self.width
                 background_color: 1,1,1,0
@@ -28,8 +29,10 @@ GridLayout:
                 canvas:
                     Rectangle:
                         source: 'resources/icons/power.png'
-                        size: (self.height-20, self.height-20)
-                        pos: (self.pos[0]+10, self.pos[1]+10)
+                        size: (self.height-25, self.height-25)
+                        pos: (self.pos[0]+15, self.pos[1]+15)
+
+                on_press: app.on_power_btn_pressed()
 
             Button:
                 size_hint_y: None
@@ -39,8 +42,8 @@ GridLayout:
                 canvas:
                     Rectangle:
                         source: 'resources/icons/settings.png'
-                        size: (self.height-20, self.height-20)
-                        pos: (self.pos[0]+10, self.pos[1]+10)
+                        size: (self.height-25, self.height-25)
+                        pos: (self.pos[0]+15, self.pos[1]+15)
 
     ScrollView:
         do_scroll_x: False
