@@ -1,12 +1,12 @@
 GridLayout:
     cols: 2
     side_menu: side_menu
-    canvas.before:
-        Color:
-            rgb: 0,0.04,0.11
+
+    canvas:
         Rectangle:
             pos: self.pos
             size: self.size
+            source: 'resources/images/background.png'
 
     ScrollView:
         do_scroll_x: False
@@ -51,12 +51,8 @@ GridLayout:
 
         GridLayout:
             id: main_menu
-            on_parent: self.bind(minimum_height=self.setter('height'))
-            cols: 1
+            on_parent: self.bind(minimum_height=self.setter('height')); app.create_main_menu_buttons(self)
+            cols: 4
             size_hint_y: None
-
-            Button:
-                text: "test1"
-
-            Button:
-                text: "test2"
+            spacing: 25
+            padding: 25

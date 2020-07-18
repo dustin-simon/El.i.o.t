@@ -1,3 +1,8 @@
+"""
+========================================
+El.i.o.t - Electronics Input Output Tool
+========================================
+"""
 from kivy.lang import Builder
 from kivy.uix.popup import Popup
 
