@@ -34,17 +34,6 @@ GridLayout:
 
                 on_press: app.on_power_btn_pressed()
 
-            Button:
-                size_hint_y: None
-                height: self.width
-                background_color: 1,1,1,0
-
-                canvas:
-                    Rectangle:
-                        source: 'resources/icons/settings.png'
-                        size: (self.height-25, self.height-25)
-                        pos: (self.pos[0]+20, self.pos[1]+15)
-
     ScrollView:
         do_scroll_x: False
         do_scroll_y: True

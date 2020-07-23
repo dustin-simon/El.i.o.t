@@ -19,58 +19,7 @@ class EliotApp(App):
         os.system("shutdown now")
 
     def get_modules(self):
-
-       return [
-            {
-                "name": 'GPIO'
-            }, {
-                "name": "PWM",
-            }, {
-                "name": "I²C",
-            }, {
-                "name": "SPI",
-            }, {
-                "name": "ADC",
-            }, {
-                "name": "DAC",
-            }, {
-                "name": "PWM",
-            }, {
-                "name": "Frequency",
-            }, {
-                "name": 'GPIO'
-            }, {
-                "name": "PWM",
-            }, {
-                "name": "I²C",
-            }, {
-                "name": "SPI",
-            }, {
-                "name": "ADC",
-            }, {
-                "name": "DAC",
-            }, {
-                "name": "PWM",
-            }, {
-                "name": "Frequency",
-            }, {
-                "name": 'GPIO'
-            }, {
-                "name": "PWM",
-            }, {
-                "name": "I²C",
-            }, {
-                "name": "SPI",
-            }, {
-                "name": "ADC",
-            }, {
-                "name": "DAC",
-            }, {
-                "name": "PWM",
-            }, {
-                "name": "Frequency",
-            }
-        ]
+       return []
 
     def create_main_menu_buttons(self, main_menu):
         
