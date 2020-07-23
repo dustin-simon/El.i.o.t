@@ -11,8 +11,6 @@ from eliot.ui.popup.shutdown import Shutdown as ShutdownPopup
 from eliot.ui.menu.module_button import ModuleButton
 
 class EliotApp(App):
-
-    MAIN_COLOR = 0,0,0.5,1
     
     def on_power_btn_pressed(self):
         ShutdownPopup().open()
@@ -21,7 +19,8 @@ class EliotApp(App):
         os.system("shutdown now")
 
     def get_modules(self):
-        return [
+
+       return [
             {
                 "name": 'GPIO'
             }, {

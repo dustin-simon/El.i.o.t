@@ -30,7 +30,7 @@ GridLayout:
                     Rectangle:
                         source: 'resources/icons/power.png'
                         size: (self.height-25, self.height-25)
-                        pos: (self.pos[0]+15, self.pos[1]+15)
+                        pos: (self.pos[0]+20, self.pos[1]+15)
 
                 on_press: app.on_power_btn_pressed()
 
@@ -43,7 +43,7 @@ GridLayout:
                     Rectangle:
                         source: 'resources/icons/settings.png'
                         size: (self.height-25, self.height-25)
-                        pos: (self.pos[0]+15, self.pos[1]+15)
+                        pos: (self.pos[0]+20, self.pos[1]+15)
 
     ScrollView:
         do_scroll_x: False
@@ -55,4 +55,4 @@ GridLayout:
             cols: 4
             size_hint_y: None
             spacing: 25
-            padding: 25
+            padding: 15
