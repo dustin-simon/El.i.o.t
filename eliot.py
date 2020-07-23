@@ -3,8 +3,6 @@
 El.i.o.t - Electronics Input Output Tool
 ========================================
 """
-import time
-
 import eliot
 
 def print_title():

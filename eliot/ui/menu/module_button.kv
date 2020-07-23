@@ -1,0 +1,46 @@
+#:include eliot/ui/separator.kv
+
+<ModuleButton>:
+    module_icon: module_icon
+    name_label: name_label
+
+    orientation: "vertical"
+
+    size_hint_y: None
+    height: self.width
+
+    canvas.before:
+        Color:
+            rgba: 1,1,1,0
+
+    on_press: print("I got clicked!")
+
+    GridLayout:
+        cols: 1
+        padding: 15
+
+        canvas.before:
+            Color:
+                rgba: 0.1,0.1,0.1,0.92
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [(10,10) for i in range(4)]
+
+        Image:
+            id: module_icon
+
+    Label:
+        id: name_label
+        size_hint_y: 0.4
+        font_size: 20
+        markup: True
+        color: 1,1,1,1
+
+        canvas.before:
+            Color:
+                rgba: 0.05,0.05,0.05,1
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [(10,10) for i in range(4)]
