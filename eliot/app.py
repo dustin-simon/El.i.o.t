@@ -9,8 +9,14 @@ from kivy.app import App
 
 from eliot.ui.popup.shutdown import Shutdown as ShutdownPopup
 from eliot.ui.menu.module_button import ModuleButton
+from eliot.screensaver import Screensaver
 
 class EliotApp(App):
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+        self.screensaver = Screensaver()
     
     def on_power_btn_pressed(self):
         ShutdownPopup().open()
