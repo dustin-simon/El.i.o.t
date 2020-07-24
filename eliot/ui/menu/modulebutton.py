@@ -7,7 +7,7 @@ from kivy.lang import Builder
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.behaviors import ButtonBehavior
 
-Builder.load_file("eliot/ui/menu/module_button.kv")
+Builder.load_file("eliot/ui/menu/modulebutton.kv")
 
 class ModuleButton(ButtonBehavior, BoxLayout):
 
